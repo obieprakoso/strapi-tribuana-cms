@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/obieprak/tribuana_cms
+    - export DEPLOYPATH=/home/obieprak/public_html/tribuana_cms
     - /usr/bin/rsync -Paz * $DEPLOYPATH --delete
