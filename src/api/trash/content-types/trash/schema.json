@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trashes",
+  "info": {
+    "singularName": "trash",
+    "pluralName": "trashes",
+    "displayName": "Trash",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "paymentDate": {
+      "type": "date"
+    },
+    "paymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "paid",
+        "notYetPaid"
+      ],
+      "default": "notYetPaid"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "cash",
+        "transfer"
+      ],
+      "default": "transfer"
+    },
+    "pay": {
+      "type": "biginteger"
+    }
+  }
+}

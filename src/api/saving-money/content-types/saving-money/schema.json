@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saving_monies",
+  "info": {
+    "singularName": "saving-money",
+    "pluralName": "saving-monies",
+    "displayName": "Saving Money",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "paymentDate": {
+      "type": "date"
+    },
+    "paymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "paid",
+        "notYetPaid"
+      ],
+      "default": "notYetPaid"
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "cash",
+        "transfer"
+      ],
+      "default": "transfer"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "pay": {
+      "type": "biginteger"
+    }
+  }
+}
